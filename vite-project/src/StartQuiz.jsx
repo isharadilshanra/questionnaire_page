@@ -11,7 +11,7 @@ function StartQuiz() {
             </video>
             <div className="content">
                 <div className='gameName'>
-                    <h1>Game Name</h1>
+                    <h1>Lets Go</h1>
                     <h2>Let's Answer few quections</h2>
                     <Link to="/quiz" className="start-button">Start Quiz</Link>
                 </div>
