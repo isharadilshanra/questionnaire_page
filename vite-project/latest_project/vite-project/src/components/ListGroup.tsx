@@ -4,8 +4,12 @@
 
 import { useState } from "react";
 
-function ListGroup() {
-  let items = ["option 1", "option 2", "option 3", "option 4", "option 5"];
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+}
+function ListGroup({ items, heading }: ListGroupProps) {
+  // let items = ["option 1", "option 2", "option 3", "option 4", "option 5"];
   // let selctedIndex = 0;
 
   // hooks
@@ -24,7 +28,7 @@ function ListGroup() {
 
   return (
     <>
-      <h1>List Group</h1>
+      <h1>{heading}</h1>
       {getMessge()}
       {items.length === 0 && <h3>The list is empty</h3>}
       <ul className="list-group">
