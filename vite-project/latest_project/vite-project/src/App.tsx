@@ -1,4 +1,5 @@
 import Message from "./Message";
+import Alert from "./components/Alert";
 import ListGroup from "./components/ListGroup";
 
 const handleClick = (item: string) => {
@@ -10,6 +11,10 @@ function App() {
 
   return (
     <div>
+      <Alert>
+        This is a <h3>success</h3> alert
+      </Alert>
+
       <ListGroup
         items={items}
         heading="list of options"
