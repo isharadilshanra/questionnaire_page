@@ -7,8 +7,10 @@ import { useState } from "react";
 interface ListGroupProps {
   items: string[];
   heading: string;
+  // function to handle selcetion
+  onSelctItem: (item: string) => void;
 }
-function ListGroup({ items, heading }: ListGroupProps) {
+function ListGroup({ items, heading, onSelctItem }: ListGroupProps) {
   // let items = ["option 1", "option 2", "option 3", "option 4", "option 5"];
   // let selctedIndex = 0;
 
@@ -37,6 +39,7 @@ function ListGroup({ items, heading }: ListGroupProps) {
             key={index}
             onClick={() => {
               setSelectedIndex(index);
+              onSelctItem(item);
             }}
             className={
               selctedIndex === index
