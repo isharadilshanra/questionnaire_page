@@ -1,6 +1,7 @@
 import Message from "./Message";
 import Alert from "./components/Alert";
 import ListGroup from "./components/ListGroup";
+import Button from "./components/Button";
 
 const handleClick = (item: string) => {
   console.log(item);
@@ -20,6 +21,11 @@ function App() {
         heading="list of options"
         onSelctItem={handleClick}
       />
+      <div>
+        <p></p>
+        <p>Click the button to finish and submit.</p>
+        <Button />
+      </div>
       <Message />
     </div>
   );
