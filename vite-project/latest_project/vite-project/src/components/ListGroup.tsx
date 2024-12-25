@@ -6,10 +6,11 @@ import { useState } from "react";
 
 function ListGroup() {
   let items = ["option 1", "option 2", "option 3", "option 4", "option 5"];
-  let selctedIndex = 0;
+  // let selctedIndex = 0;
 
   // hooks
-  useState(-1);
+  const [selctedIndex, setSelectedIndex] = useState(-1);
+
   //items = [];
   //const messge = items.length === 0 ? <h3> No items found</h3> : null;
 
@@ -31,7 +32,7 @@ function ListGroup() {
           <li
             key={index}
             onClick={() => {
-              selctedIndex = index;
+              setSelectedIndex(index);
             }}
             className={
               selctedIndex === index
