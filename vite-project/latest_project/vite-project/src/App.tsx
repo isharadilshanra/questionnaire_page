@@ -7,8 +7,13 @@ const handleClick = (item: string) => {
   console.log(item);
 };
 
+const onSubmit = () => {
+  console.log("Submitted");
+};
+
 function App() {
   let items = ["option 1", "option 2", "option 3", "option 4", "option 5"];
+  let buttonSubmit = "Submit";
 
   return (
     <div>
@@ -24,7 +29,7 @@ function App() {
       <div>
         <p></p>
         <p>Click the button to finish and submit.</p>
-        <Button />
+        <Button buttonType={buttonSubmit} onSubmit={onSubmit} />
       </div>
       <Message />
     </div>
