@@ -29,7 +29,7 @@ function App() {
       <div>
         <p></p>
         <p>Click the button to finish and submit.</p>
-        <Button buttonType={buttonSubmit} onSubmit={onSubmit} />
+        <Button buttonType={buttonSubmit} onSubmit={onSubmit} color="success" />
       </div>
       <Message />
     </div>

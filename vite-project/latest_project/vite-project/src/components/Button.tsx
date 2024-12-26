@@ -8,11 +8,12 @@
 interface ButtonProps {
   onSubmit: () => void;
   buttonType: string;
+  color?: "primary" | "secondary" | "success" | "danger";
 }
 
-export const submitButton = ({ onSubmit, buttonType }: ButtonProps) => {
+export const submitButton = ({ onSubmit, buttonType, color }: ButtonProps) => {
   return (
-    <button type="button" className="btn btn-success" onClick={onSubmit}>
+    <button type="button" className={"btn btn-" + color} onClick={onSubmit}>
       {buttonType}
     </button>
   );
