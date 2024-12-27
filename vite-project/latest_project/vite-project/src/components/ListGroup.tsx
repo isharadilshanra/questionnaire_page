@@ -21,7 +21,7 @@ function ListGroup({ items, heading, onSelctItem }: ListGroupProps) {
   //const messge = items.length === 0 ? <h3> No items found</h3> : null;
 
   const getMessge = () => {
-    return items.length === 0 ? <h3> No items found</h3> : null;
+    return items.length === 0 ? <h5> No items found</h5> : null;
   };
   // handle click event
   //   const handleClick = (event: MouseEvent) => {

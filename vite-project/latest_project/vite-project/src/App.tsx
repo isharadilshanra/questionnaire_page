@@ -9,6 +9,7 @@ import StartPage from "./components/StartPage";
 function App() {
   let items = ["option 1", "option 2", "option 3", "option 4", "option 5"];
   let buttonSubmit = "Submit";
+  let startQuiz = "Start Quiz";
   const [alertVisible, setAlertVisible] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
 
@@ -25,9 +26,34 @@ function App() {
     setAlertVisible(false);
   };
 
+  const onStartQuiz = () => {
+    console.log("Quiz started");
+    setQuizStarted(true);
+  };
+
   return (
     <div>
-      <div>{!quizStarted && <StartPage>Start page</StartPage>}</div>
+      <div>
+        {!quizStarted && (
+          <StartPage
+            quizTopic="Deep learning for vision"
+            quizAuthor="G.K.M.Ishara Dilshan"
+            modifiedDate="2024-12-27"
+          >
+            <div>
+              <p></p>
+              <p>
+                <h6>Attempt quiz now</h6>
+              </p>
+              <Button
+                buttonType={startQuiz}
+                onSubmit={onStartQuiz}
+                color="success"
+              />
+            </div>
+          </StartPage>
+        )}
+      </div>
       <div>
         {quizStarted && (
           <div>
@@ -56,7 +82,8 @@ function App() {
               )}
             </div>
             <div>
-              <p>Click the button to finish and submit.</p>
+              <p></p>
+              <p>Click the button to finish and submit</p>
               <Button
                 buttonType={buttonSubmit}
                 onSubmit={onSubmit}
